@@ -48,7 +48,7 @@ pipeline {
     stage('Update Deployment File') {
       environment {
         GIT_REPO_NAME = "remya-new-devops-eng"
-        GIT_USER_NAME = "remyadevops"
+        GIT_USER_NAME = "remybobin18@gmail.com"
 "
       }
       steps {

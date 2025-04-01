@@ -49,7 +49,6 @@ pipeline {
       environment {
         GIT_REPO_NAME = "remya-new-devops-eng"
         GIT_USER_NAME = "remybobin18@gmail.com"
-"
       }
       steps {
         withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {

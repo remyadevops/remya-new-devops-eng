@@ -32,7 +32,7 @@ pipeline {
     stage('Build and Push Docker Image') {
       steps {
         script {
-          sh  'docker build -t java-maven-sonar-argocd-helm-k8s/spring-boot-app/app .'
+          sh  'docker build -t remdevops/app .'
           def dockerImage = docker.image("${DOCKER_IMAGE}")
           docker.withRegistry('https://index.docker.io/v1/', "docker") {
             dockerImage.push()

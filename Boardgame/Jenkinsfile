@@ -1,6 +1,5 @@
 pipeline {
-    agent any
-    
+    agent any  
     tools {
         jdk 'jdk17'
         maven 'maven3'
@@ -12,7 +11,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-               git branch: 'main', url: 'https://github.com/remyadevops/remya-new-devops-eng.git'
+                git branch: 'main', credentialsId: 'git', url:'https://github.com/remyadevops/remya-new-devops-eng.git'
             }
         } 
         stage('Compile') {

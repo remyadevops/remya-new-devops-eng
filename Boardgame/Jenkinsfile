@@ -9,14 +9,12 @@ pipeline {
     environment {
         SCANNER_HOME= tool 'sonar-scanner'
     }
-
     stages {
         stage('Git Checkout') {
             steps {
-               //git branch: 'main', url: 'https://github.com/remyadevops/remya-new-devops-eng.git'
+               git branch: 'main', url: 'https://github.com/remyadevops/remya-new-devops-eng.git'
             }
-        }
-        
+        } 
         stage('Compile') {
             steps {
                 sh "mvn compile"
